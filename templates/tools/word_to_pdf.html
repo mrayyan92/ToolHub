@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="tool-page">
+
+    <div class="tool-box">
+
+        <h1>📄 Word to PDF Converter</h1>
+
+        <p>
+            Upload your Word document and convert it into a PDF in seconds.
+        </p>
+
+        <form action="/convert-word" method="POST" enctype="multipart/form-data">
+
+            <div class="upload-box" id="dropZone">
+
+                <input
+                    type="file"
+                    id="pdfFile"
+                    name="word"
+                    accept=".doc,.docx"
+                    hidden
+                    required>
+
+                <label for="pdfFile">
+
+                    <div class="upload-icon">
+                        📁
+                    </div>
+
+                    <h3>Drag & Drop Word File</h3>
+
+                    <p>or click to browse</p>
+
+                    <span id="filename">
+                        No file selected
+                    </span>
+
+                </label>
+
+            </div>
+
+            <button class="btn">
+                Convert to PDF
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="tool-page">
+
+    <div class="tool-box">
+
+        {% with
+
+icon="🖼️",
+
+title="JPG to PDF",
+
+subtitle="Convert one or more images into a PDF."
+
+%}
+
+{% include "components/tool_header.html" %}
+
+{% endwith %}
+
+        <form action="/convert-jpg" method="POST" enctype="multipart/form-data">
+
+            <div class="upload-box" id="dropZone">
+
+                <input
+                    type="file"
+                    id="pdfFile"
+                    name="images"
+                    accept=".jpg,.jpeg,.png"
+                    multiple
+                    hidden
+                    required>
+
+                <label for="pdfFile">
+
+                    <div class="upload-icon">
+                        🖼️
+                    </div>
+
+                    <h3>Drag & Drop Images</h3>
+
+                    <p>or click to browse</p>
+
+                    <span id="filename">
+                        No files selected
+                    </span>
+
+                </label>
+
+            </div>
+
+            <button class="btn">
+                Convert to PDF
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="tool-container">
+
+    {% with
+
+icon="📄",
+
+title="PDF to Word Converter",
+
+subtitle="Upload your PDF and convert it into an editable Word document in seconds."
+
+%}
+
+{% include "components/tool_header.html" %}
+
+{% endwith %}
+
+    <form action="/convert-pdf" method="POST" enctype="multipart/form-data">
+
+        {% with
+            input_name="pdf",
+            accept=".pdf",
+            icon="📁",
+            heading="Choose PDF or Drag & Drop",
+            multiple=False
+        %}
+
+            {% include "components/file_upload.html" %}
+
+        {% endwith %}
+
+        <button class="btn" type="submit">
+            Convert PDF
+        </button>
+
+    </form>
+
+</div>
+
+<div id="loader" style="display:none;" class="loader-overlay">
+    <div class="loader"></div>
+    <p>Converting your PDF...</p>
+</div>
+
+<div id="progress-container" style="display:none;">
+    <div id="progress-bar"></div>
+</div>
+
+{% endblock %}

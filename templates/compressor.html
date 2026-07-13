@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="tool-container">
+
+    <h1>🖼 Image Compressor</h1>
+
+    <p class="subtitle">
+        Compress your JPG, JPEG and PNG images while maintaining excellent quality.
+    </p>
+
+    <form action="/compress-image" method="POST" enctype="multipart/form-data">
+
+        <div class="drop-zone">
+
+            <h3>📂 Drag & Drop Image Here</h3>
+
+            <p>or</p>
+
+            <input
+                type="file"
+                name="image"
+                accept=".jpg,.jpeg,.png"
+                required>
+
+        </div>
+
+        <br>
+
+        <label><strong>Compression Quality</strong></label>
+
+        <br><br>
+
+        <input
+            type="range"
+            name="quality"
+            min="10"
+            max="100"
+            value="80"
+            id="qualitySlider">
+
+        <p>
+
+            Quality:
+            <span id="qualityValue">80</span>%
+
+        </p>
+
+        <br>
+
+        <button type="submit">
+
+            🚀 Compress Image
+
+        </button>
+
+    </form>
+
+    <div id="loader">
+
+        <div class="spinner"></div>
+
+    </div>
+
+    <div id="progress-container">
+
+        <div id="progress-bar"></div>
+
+    </div>
+
+</div>
+
+<script>
+
+const slider=document.getElementById("qualitySlider");
+
+const value=document.getElementById("qualityValue");
+
+slider.oninput=function(){
+
+value.innerHTML=this.value;
+
+}
+
+</script>
+
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="tool-container">
+
+    {% with
+
+icon="✂️",
+
+title="Split PDF",
+
+subtitle="Extract selected pages from your PDF."
+
+%}
+
+{% include "components/tool_header.html" %}
+
+{% endwith %}
+
+    <form action="/split-pdf-file"
+          method="POST"
+          enctype="multipart/form-data">
+
+        {% with
+            input_name="pdf",
+            accept=".pdf",
+            icon="📄",
+            heading="Choose PDF or Drag & Drop",
+            multiple=False
+        %}
+
+            {% include "components/file_upload.html" %}
+
+        {% endwith %}
+
+        <div class="page-range">
+
+            <input
+                type="number"
+                name="start"
+                placeholder="Start Page"
+                required>
+
+            <input
+                type="number"
+                name="end"
+                placeholder="End Page"
+                required>
+
+        </div>
+
+        <button class="btn">
+            Split PDF
+        </button>
+
+    </form>
+
+</div>
+
+{% include "components/loader.html" %}
+{% include "components/progress.html" %}
+
+{% endblock %}

@@ -1,0 +1,16 @@
+# Virtual Environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Upload folders
+uploads/
+outputs/
+
+# Zip files
+*.zip
+
+# VS Code settings
+.vscode/

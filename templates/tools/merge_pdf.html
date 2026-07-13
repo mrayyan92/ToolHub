@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="tool-container">
+
+    {% with
+
+icon="📚",
+
+title="Merge PDF",
+
+subtitle="Combine multiple PDF documents into one file."
+
+%}
+
+{% include "components/tool_header.html" %}
+
+{% endwith %}
+
+    <form action="/merge-pdf-files"
+          method="POST"
+          enctype="multipart/form-data">
+
+        {% with
+            input_name="pdfs",
+            accept=".pdf",
+            icon="📚",
+            heading="Choose PDF Files or Drag & Drop",
+            multiple=True
+        %}
+
+            {% include "components/file_upload.html" %}
+
+        {% endwith %}
+
+        <button class="btn" type="submit">
+            Merge PDFs
+        </button>
+
+    </form>
+
+</div>
+
+{% include "components/loader.html" %}
+{% include "components/progress.html" %}
+
+{% endblock %}

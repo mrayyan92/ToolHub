@@ -1,0 +1,285 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Your Complete
+            <span>Document Toolkit</span>
+        </h1>
+
+        <p>
+            Convert, Merge, Compress, Edit, OCR and Manage
+            PDFs, Images and Office files — Fast, Secure and Free.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="/pdf-to-word" class="btn">
+                🚀 Start Converting
+            </a>
+
+            <a href="#tools" class="btn-outline">
+                Browse Tools
+            </a>
+
+        </div>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="toolSearch"
+                placeholder="🔍 Search a tool...">
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stats">
+
+    <div class="stat">
+        <h2 id="toolsCounter">0</h2>
+        <p>Online Tools</p>
+    </div>
+
+    <div class="stat">
+        <h2 id="freeCounter">0%</h2>
+        <p>Free</p>
+    </div>
+
+    <div class="stat">
+        <h2 id="speedCounter">0</h2>
+        <p>Processing</p>
+    </div>
+
+    <div class="stat">
+        <h2 id="secureCounter">0</h2>
+        <p>Privacy Protected</p>
+    </div>
+
+</section>
+
+<h2 class="section-title" id="tools">
+    Our Tools
+</h2>
+
+<section class="featured-tool">
+
+    <div class="featured-content">
+
+        <div>
+
+            <span class="featured-tag">
+                ⭐ MOST POPULAR
+            </span>
+
+            <h2>PDF to Word Converter</h2>
+
+            <p>
+
+                Convert scanned and digital PDFs into editable
+                Word documents in seconds.
+
+            </p>
+
+            <a href="/pdf-to-word" class="btn">
+
+                Try Now →
+
+            </a>
+
+        </div>
+
+        <div class="featured-icon">
+
+            📄
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= PDF TOOLS ================= -->
+
+<h3 class="category-title">📄 PDF Tools</h3>
+
+<section class="cards">
+
+    <a href="/pdf-to-word" class="card">
+
+        <div class="icon">📄</div>
+
+        <h3>
+    PDF to Word
+    <span class="new-badge">NEW</span>
+</h3>
+
+        <p>Convert PDF into editable DOCX.</p>
+
+    </a>
+
+    <a href="/word-to-pdf" class="card">
+
+        <div class="icon">📝</div>
+
+        <h3>
+    Word to PDF
+    <span class="new-badge">NEW</span>
+</h3>
+
+        <p>Convert Word documents into PDF.</p>
+
+    </a>
+
+    <a href="/merge-pdf" class="card">
+
+        <div class="icon">📚</div>
+
+        <h3>
+    Merge PDF
+    <span class="new-badge">NEW</span>
+</h3>
+
+        <p>Combine multiple PDF files into one.</p>
+
+    </a>
+
+    <a href="/split-pdf" class="card">
+
+    <div class="icon">✂️</div>
+
+    <h3>
+        Split PDF
+        <span class="new-badge">NEW</span>
+    </h3>
+
+    <p>
+        Extract selected pages from a PDF document.
+    </p>
+
+</a>
+
+</section>
+
+
+<!-- ================= IMAGE TOOLS ================= -->
+
+<h3 class="category-title">🖼️ Image Tools</h3>
+
+<section class="cards">
+
+    <a href="/compressor" class="card">
+
+        <div class="icon">🖼️</div>
+
+        <h3>Image Compressor</h3>
+
+        <p>Reduce image size instantly.</p>
+
+    </a>
+
+    <a href="/remover" class="card">
+
+        <div class="icon">🎨</div>
+
+        <h3>Background Remover</h3>
+
+        <p>Remove image background automatically.</p>
+
+    </a>
+
+    <a href="/jpg-to-pdf" class="card">
+
+        <div class="icon">📷</div>
+
+        <h3>
+    JPG to PDF
+    <span class="new-badge">NEW</span>
+</h3>
+
+        <p>Convert images into PDF.</p>
+
+    </a>
+
+</section>
+
+
+<!-- ================= OCR TOOLS ================= -->
+
+<h3 class="category-title">🔍 OCR Tools</h3>
+
+<section class="cards">
+
+    <div class="card">
+
+        <div class="icon">🔍</div>
+
+        <h3>Image to Text</h3>
+
+        <p>Coming Soon</p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= OFFICE TOOLS ================= -->
+
+<h3 class="category-title">📊 Office Tools</h3>
+
+<section class="cards">
+
+    <div class="card">
+
+        <div class="icon">📊</div>
+
+        <h3>Excel to PDF</h3>
+
+        <p>Coming Soon</p>
+
+    </div>
+
+</section>
+
+<section class="why">
+
+    <h2>Why Choose ToolHub?</h2>
+
+    <div class="features">
+
+        <div class="feature">
+
+            ⚡ Fast Conversion
+
+        </div>
+
+        <div class="feature">
+
+            🔒 Secure Files
+
+        </div>
+
+        <div class="feature">
+
+            ☁ Cloud Ready
+
+        </div>
+
+        <div class="feature">
+
+            💯 Completely Free
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

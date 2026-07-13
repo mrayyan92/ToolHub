@@ -1,0 +1,38 @@
+<div class="drop-zone" id="dropZone">
+
+    <input
+        type="file"
+        id="fileInput"
+        name="{{ input_name }}"
+        accept="{{ accept }}"
+        {% if multiple %}multiple{% endif %}
+        hidden
+        required>
+
+    <label for="fileInput">
+
+        <div class="upload-icon">
+
+            {{ icon }}
+
+        </div>
+
+        <h2>{{ heading }}</h2>
+
+        <p class="browse-text">
+            or browse files
+        </p>
+
+        <div id="filename">
+
+            No file selected
+
+        </div>
+
+        <div id="filesize">
+
+        </div>
+
+    </label>
+
+</div>
