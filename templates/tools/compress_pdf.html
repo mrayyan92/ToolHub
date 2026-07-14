@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% include "components/tool_header.html" with
+title="📄 Compress PDF",
+subtitle="Reduce the size of your PDF while maintaining good quality."
+%}
+
+<form action="/compress-pdf" method="POST" enctype="multipart/form-data">
+
+    {% set input_name = "pdf" %}
+    {% set accept = ".pdf" %}
+    {% set icon = "📄" %}
+    {% set heading = "Choose PDF or Drag & Drop" %}
+    {% set multiple = false %}
+
+    {% include "components/file_upload.html" %}
+
+    {% include "components/progress.html" %}
+
+    {% include "components/loader.html" %}
+
+    <button type="submit" class="btn">
+        Compress PDF
+    </button>
+
+</form>
+
+{% endblock %}

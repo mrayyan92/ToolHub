@@ -23,8 +23,8 @@ os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 # ================= HOME =================
 
 @app.route("/")
-def home():
-    return render_template("index.html")
+def index():
+    return render_template("pages/index.html")
 
 
 # ================= IMAGE COMPRESSOR =================
@@ -284,6 +284,10 @@ def split_pdf_file():
         writer.write(output)
 
     return send_file(output_path, as_attachment=True)
+
+@app.route("/compress-pdf")
+def compress_pdf():
+    return render_template("tools/compress_pdf.html")
 
 
 # ================= ABOUT =================
